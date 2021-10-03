@@ -1,0 +1,7 @@
+/public/config.json
+/build
+/.env
+/config.json
+.firebaserc
+firebase.json
+/.firebase
