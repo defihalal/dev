@@ -26,5 +26,5 @@ In summary, DeFi Halal protocol offers:
 
 Being identical in all respects, DeFi Halal Protocol contracts benefit from the audits done by Liquity on the same contracts as well as from being battle-tested over the time since their deployment. All of DeFi Halal's contracts' code is open and verified on Polygonscan so anyone can check to make sure the contracts are exactly the same as the audited and battle-tested Liquity contracts.
 
-More information on the protocol mechanics can be found in the Liquity docs https://docs.liquity.org/ with the exception of the names of tokens (LUSD => USDH and LQTY => HALAL) as well as amount and fee parameters (200x more afforable for DeFi Halal).
+More information on the protocol mechanics can be found in the Liquity docs https://docs.liquity.org/ with the exception of the names of tokens (LUSD => USDH and LQTY => HALAL) as well as amount and fee parameters (200x more affordable for DeFi Halal).
 
