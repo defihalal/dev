@@ -32,7 +32,7 @@ const uniswapQuery = (halalTokenAddress: string, uniTokenAddress: string) => `{
 export async function fetchPrices(halalTokenAddress: string, uniTokenAddress: string) {
   // const response = await window.fetch("https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2", {
   const response = await window.fetch(
-    "https://api.thegraph.com/subgraphs/name/chrisjess/quickswap-matic-exchange",
+    "https://api.thegraph.com/subgraphs/name/proy24/quickswap-polygon",
     {
       method: "POST",
       headers: {
@@ -67,6 +67,7 @@ export async function fetchPrices(halalTokenAddress: string, uniTokenAddress: st
       Decimal.from(data.pair.totalSupply)
     );
 
+    console.log("halalPriceUSD, uniLpPriceUSD", halalPriceUSD, uniLpPriceUSD);
     return { halalPriceUSD, uniLpPriceUSD };
   }
 

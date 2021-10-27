@@ -89,11 +89,23 @@ const App = () => {
       }}
     >
       <Heading sx={{ mb: 3 }}>
-        <Icon name="exclamation-triangle" /> DeFi Halal is not deployed to{" "}
-        {/* {chainId === 1 ? "mainnet" : "this network"}. */}
-        {"this network"}.
+        <Icon name="exclamation-triangle" /> DeFi Halal is deployed to Polygon Matic only for now
       </Heading>
-      Please switch your Metamask to Polygon Matic and refresh the page.
+      <br />
+      Please switch your Metamask to <b>Polygon Matic</b> and refresh the page
+      <br />
+      <br />
+      <span>
+        *** If you don't have Polygon Matic in your Metamask,{" "}
+        <a
+          href="https://medium.com/stakingbits/setting-up-metamask-for-polygon-matic-network-838058f6d844"
+          rel="noreferrer"
+          target="_blank"
+        >
+          this article
+        </a>{" "}
+        explains how to add it in a few simple steps! ***
+      </span>
     </Flex>
   );
 

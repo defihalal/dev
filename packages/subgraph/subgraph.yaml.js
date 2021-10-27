@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const network = process.argv[2] || "mainnet";
+const network = process.argv[2] || "matic";
 const { addresses, startBlock } = require(`@liquity/lib-ethers/deployments/${network}.json`);
 
 console.log(`Preparing subgraph manifest for network "${network}"`);
@@ -13,14 +13,14 @@ const yaml = (strings, ...keys) =>
 
 const manifest = yaml`
 specVersion: 0.0.2
-description: Liquity is a decentralized borrowing protocol offering interest-free liquidity against collateral in Ether.
-repository: https://github.com/liquity/dev/tree/main/packages/subgraph
+description: DeFi Halal is a decentralized borrowing protocol offering interest-free liquidity against collateral in MATIC.
+repository: https://github.com/defihalal/dev/tree/main/packages/subgraph
 schema:
   file: ./schema.graphql
 dataSources:
   - name: TroveManager
     kind: ethereum/contract
-    network: mainnet
+    network: matic
     source:
       abi: TroveManager
       address: "${addresses.troveManager}"
@@ -55,7 +55,7 @@ dataSources:
           handler: handleLTermsUpdated
   - name: BorrowerOperations
     kind: ethereum/contract
-    network: mainnet
+    network: matic
     source:
       abi: BorrowerOperations
       address: "${addresses.borrowerOperations}"
@@ -82,7 +82,7 @@ dataSources:
           handler: handleUSDHBorrowingFeePaid
   - name: PriceFeed
     kind: ethereum/contract
-    network: mainnet
+    network: matic
     source:
       abi: PriceFeed
       address: "${addresses.priceFeed}"
@@ -105,7 +105,7 @@ dataSources:
           handler: handleLastGoodPriceUpdated
   - name: StabilityPool
     kind: ethereum/contract
-    network: mainnet
+    network: matic
     source:
       abi: StabilityPool
       address: "${addresses.stabilityPool}"
@@ -137,7 +137,7 @@ dataSources:
           handler: handleFrontendTagSet
   - name: CollSurplusPool
     kind: ethereum/contract
-    network: mainnet
+    network: matic
     source:
       abi: CollSurplusPool
       address: "${addresses.collSurplusPool}"
@@ -162,7 +162,7 @@ dataSources:
           handler: handleCollSurplusBalanceUpdated
   - name: HALALStaking
     kind: ethereum/contract
-    network: mainnet
+    network: matic
     source:
       abi: HALALStaking
       address: "${addresses.halalStaking}"
@@ -193,7 +193,7 @@ ${[
   ([name, address]) => yaml`
   - name: ${name}
     kind: ethereum/contract
-    network: mainnet
+    network: matic
     source:
       abi: ERC20
       address: "${address}"

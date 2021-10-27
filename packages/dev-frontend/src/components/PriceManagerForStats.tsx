@@ -85,7 +85,7 @@ export const PriceManagerForStats: React.FC = () => {
                   <Card variant="tooltip">
                     The DeFi Halal Protocol uses the{" "}
                     <a
-                      href="https://data.chain.link/ethereum/mainnet/crypto-usd/matic-usd"
+                      href="https://data.chain.link/polygon/mainnet/crypto-usd/matic-usd"
                       target="_blank"
                       rel="noreferrer"
                       title="Chainlink MATIC/USD Price Feed"
@@ -101,7 +101,7 @@ export const PriceManagerForStats: React.FC = () => {
             </div>
             <div>
               <a
-                href="https://data.chain.link/ethereum/mainnet/crypto-usd/matic-usd"
+                href="https://data.chain.link/polygon/mainnet/crypto-usd/matic-usd"
                 target="_blank"
                 rel="noreferrer"
                 title="Chainlink MATIC/USD Price Feed"

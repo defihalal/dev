@@ -27,6 +27,10 @@ export const ProtocolInformation: React.FC = () => {
           >
             Discord.
           </a>
+          <br />
+          <br />
+          Please note that if your transaction is taking too long for Metamask to pop up a
+          confirmation window, please reload your page and try again.
         </span>
       </Box>
     </Card>

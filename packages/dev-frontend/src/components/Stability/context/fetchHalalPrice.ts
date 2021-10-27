@@ -23,8 +23,9 @@ const uniswapQuery = (halalTokenAddress: string) => `{
 
 export async function fetchHalalPrice(halalTokenAddress: string) {
   // const response = await window.fetch("https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2", {
+  console.log("uniswapQuery(halalTokenAddress)", uniswapQuery(halalTokenAddress));
   const response = await window.fetch(
-    "https://api.thegraph.com/subgraphs/name/chrisjess/quickswap-matic-exchange",
+    "https://api.thegraph.com/subgraphs/name/proy24/quickswap-polygon",
     {
       method: "POST",
       headers: {
@@ -36,13 +37,14 @@ export async function fetchHalalPrice(halalTokenAddress: string) {
       })
     }
   );
-  console.log("UniswapResponse", await response.json());
 
   if (!response.ok) {
     return Promise.reject("Network error connecting to Quickswap subgraph");
   }
 
   const { data, errors }: UniswapResponse = await response.json();
+
+  console.log("UniswapResponse", data);
 
   if (errors) {
     return Promise.reject(errors);

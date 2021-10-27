@@ -45,6 +45,7 @@ const select = ({
   price,
   total,
   usdhInStabilityPool,
+  remainingStabilityPoolHALALReward,
   borrowingRate,
   redemptionRate,
   totalStakedHALAL,
@@ -54,6 +55,8 @@ const select = ({
   price,
   total,
   usdhInStabilityPool,
+  remainingStabilityPoolHALALReward,
+
   borrowingRate,
   redemptionRate,
   totalStakedHALAL,
@@ -71,6 +74,8 @@ export const SystemStats: React.FC<SystemStatsProps> = ({ variant = "info", show
     numberOfTroves,
     price,
     usdhInStabilityPool,
+    remainingStabilityPoolHALALReward,
+
     total,
     borrowingRate,
     totalStakedHALAL,
@@ -152,6 +157,29 @@ export const SystemStats: React.FC<SystemStatsProps> = ({ variant = "info", show
           {kickbackRatePct}%
         </Statistic>
       )}
+
+      {/* <Statistic
+        name="HALAL Profit Rate"
+        tooltip={
+          <>
+            <span>
+              An estimate of the HALAL profit return on the USDH deposited to the Stability Pool over
+              the next year, not including your MATIC gains from liquidations. (($HALAL_REWARDS *
+              YEARLY_DISTRIBUTION%) / DEPOSITED_USDH) * 100 = APR $
+              {remainingStabilityPoolHALALReward.shorten()}* 50% / ${usdhInStabilityPool.shorten()})
+              * 100 ={" "}
+              {remainingStabilityPoolHALALReward
+                .mul(0.5)
+                .div(usdhInStabilityPool)
+                .mul(100)
+                .shorten()}
+              %
+            </span>
+          </>
+        }
+      >
+        {remainingStabilityPoolHALALReward.mul(0.5).div(usdhInStabilityPool).mul(100).shorten()}%
+      </Statistic> */}
 
       <Box sx={{ mt: 3, opacity: 0.66 }}>
         <Box sx={{ fontSize: 0 }}>
