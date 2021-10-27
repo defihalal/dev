@@ -28,5 +28,5 @@ Being identical in all respects, DeFi Halal Protocol contracts benefit from the 
 
 More information on the protocol mechanics can be found in the Liquity docs https://docs.liquity.org/ with the exception of the names of tokens (LUSD => USDH and LQTY => HALAL) as well as amount and fee parameters (200x more affordable for DeFi Halal).
 
-If you are interested in running a frontend, please read more about it in the frontend repo: https://github.com/defihalal/frontend-registry 
+If you are interested in running a frontend, please read more about it in the frontend repo: https://github.com/defihalal/frontend-registry and apply with your frontend details
 
